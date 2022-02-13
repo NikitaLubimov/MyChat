@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Open"/>
+                <MenuItem text="Save"/>
+                <MenuItem text="Help"/>
+            </Menu>
+            <Menu text="Option">
+                <MenuItem text="Settings"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem text="Contact"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TextArea fx:id="textArea1" editable="false" promptText="Чатик"/>
+    </center>
+
+    <bottom>
+        <HBox>
+            <TextField fx:id="textField1" onAction="#sendMsg" prefWidth="640" promptText="Введите сообщение..." translateX="82"/>
+            <Button alignment="CENTER_RIGHT" onAction="#sendMsg" text="Отправить" translateX="84"/>
+        </HBox>
+    </bottom>
+
+    <left>
+        <VBox>
+            <Button text="Контакт №1"/>
+            <Button text="Контакт №2"/>
+            <Button text="Контакт №3"/>
+        </VBox>
+    </left>
+
+</BorderPane>
